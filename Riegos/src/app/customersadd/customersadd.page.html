@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Añadir Nuevo Cliente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitForm()" #clienteForm="ngForm">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" required [(ngModel)]="nuevoCliente.nombres" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" required [(ngModel)]="nuevoCliente.apellidos" name="apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input type="text" required [(ngModel)]="nuevoCliente.direccion" name="direccion"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!clienteForm.form.valid">
+      Guardar Cliente
+    </ion-button>
+  </form>
+</ion-content>

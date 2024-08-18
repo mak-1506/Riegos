@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Clientes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let cliente of clientes">
+        <ion-card (click)="openActionSheet(cliente)">
+          <ion-card-header>
+            <ion-card-title>{{cliente.nombres}} {{cliente.apellidos}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{cliente.direccion}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>  
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+<ion-button button [routerLink]="['/customersadd']">Añadir Clientes</ion-button>

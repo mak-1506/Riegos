@@ -1,0 +1,7 @@
+{
+  "name": "Riegos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

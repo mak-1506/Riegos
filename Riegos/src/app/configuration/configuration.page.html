@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>configurations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>ID del Cliente: {{ clienteId }}</ion-label>
+  </ion-item>
+  <ion-content>
+    <form (ngSubmit)="submitForm()" #clienteForm="ngForm">
+      <ion-item>
+        <ion-label position="floating">Área</ion-label>
+        <ion-input [(ngModel)]="area" name="area" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Humedad Mínima</ion-label>
+        <ion-input [(ngModel)]="hum_min" name="hum_min" required></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Humedad Máxima</ion-label>
+        <ion-input [(ngModel)]="hum_max" name="hum_max" required></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit" >
+        Guardar Configuracion
+      </ion-button>
+    </form>
+   
+    
+  </ion-content>
+</ion-content>
+
