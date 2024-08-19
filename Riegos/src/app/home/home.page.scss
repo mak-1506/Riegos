@@ -25,3 +25,8 @@
 #container a {
   text-decoration: none;
 }
+
+.background-image {
+  background: url('/assets/back.jpg') no-repeat center center;
+  background-size: cover;
+}
